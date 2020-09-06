@@ -1,22 +1,28 @@
 import React from 'react';
 import { Avatar } from '@material-ui/core';
 
+
 const Comments = (props) => {
- const {name, email, body}  = props.comment;  
-  console.log(props,name)
-    return (
-        <div>
-            
-           <div>
-             <Avatar src={`https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940`}> </Avatar>
-           </div>
-            <div>
+  const { name, email, body } = props.comment;
+  const commentStyle = {
+    backgroundColor: "whitesmoke",
+    padding: "15px"
+  }
+
+  return (
+    <div style={commentStyle}>
+      <div>
+        <Avatar src={props.profile}></Avatar>
+
+      </div>
+      <div>
         <h3>Name: {name}</h3>
         <p>E-mail: {email}</p>
         <p>Comment: {body}</p>
-            </div>
-        </div>
-    );
+        <hr />
+      </div>
+    </div>
+  );
 };
 
 export default Comments;

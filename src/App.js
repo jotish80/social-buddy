@@ -4,8 +4,8 @@ import Home from './components/Users/Home';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
+  
 } from "react-router-dom"; 
 import NotFound from './NotFound/NotFound';
 import UserDetail from './components/UserDetail/UserDetail';
